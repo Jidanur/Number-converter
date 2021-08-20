@@ -14,6 +14,7 @@ def main():
 	#hex_ieee_to_decimal("c4c07800")
 	hex_ieee_to_decimal("C2328000")
 
+
 def binary_to_dec(binary_orig):
     result = 0
     out_powers = []
@@ -128,7 +129,15 @@ sign = lambda x: (1, -1)[x<0]
 def dec_to_ieee(dec):
     is_neg = dec < 0
     dec = abs(dec)
-    
+
+	
+	
+def hex_to_bin(hex_val):
+    bin_val = bin(int(hex_val,16)).zfill(32)[2:]
+    print(bin_val)
+    return bin_val
+
+
 def hex_ieee_to_decimal(hex_val):
     print(hex_val)
     bin_val = hex_to_bin(hex_val)
